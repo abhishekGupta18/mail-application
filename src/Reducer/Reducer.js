@@ -31,6 +31,38 @@ export const reducerFunction = (state, action) => {
           }
         }),
       };
+
+    case "marksAsRead":
+      return {
+        ...state,
+        inbox: state?.inbox?.map((item) => {
+          if (item?.mId === action?.payload) {
+            return { ...item, unread: !item?.unread };
+          } else {
+            return item;
+          }
+        }),
+      };
+
+    case "undoDelete":
+      return {
+        ...state,
+        trash: state?.trash.filter((item) => item?.mId !== action.payload),
+        inbox: [
+          ...state.inbox,
+          state?.trash?.find((item) => item?.mId === action.payload),
+        ],
+      };
+
+    case "undoSpam":
+      return {
+        ...state,
+        spam: state?.spam.filter((item) => item?.mId !== action.payload),
+        inbox: [
+          ...state.inbox,
+          state?.spam?.find((item) => item?.mId === action.payload),
+        ],
+      };
     default:
       return state;
   }

@@ -5,10 +5,18 @@ import { MailCard } from "../../Card/MailCard";
 // import { mails } from "../../Data/Data";
 export const Inbox = () => {
   const { state } = useMailContext();
-  console.log(state);
+
   return (
     <>
       <Header />
+      <div>
+        <input type="checkbox" />
+        <label htmlFor="">show unread mails</label>
+
+        <input type="checkbox" />
+        <label htmlFor="">show starred mails</label>
+      </div>
+
       <h1>This is Inbox</h1>
       <ul>
         {state?.inbox?.map((mail) => (

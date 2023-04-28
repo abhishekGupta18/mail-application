@@ -1,9 +1,10 @@
+import { NavLink } from "react-router-dom";
 import { Header } from "../../Component/Header";
 
 import { useMailContext } from "../../Context/MailContext";
 
 export const Trash = () => {
-  const { state } = useMailContext();
+  const { state, dispatch } = useMailContext();
   return (
     <>
       <Header />
@@ -12,9 +13,12 @@ export const Trash = () => {
           <div>
             <h3>{subject}</h3>
             <p>{content}</p>
-
-            <button>report spam</button>
-            <button>mark as read</button>
+            <NavLink to={`/${mId}`}>View Details</NavLink>
+            <button
+              onClick={() => dispatch({ type: "undoDelete", payload: mId })}
+            >
+              restore
+            </button>
           </div>
         ))}
       </ul>

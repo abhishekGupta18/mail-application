@@ -1,8 +1,9 @@
+import { NavLink } from "react-router-dom";
 import { Header } from "../../Component/Header";
 
 import { useMailContext } from "../../Context/MailContext";
 export const Starred = () => {
-  const { state } = useMailContext();
+  const { state, dispatch } = useMailContext();
   return (
     <>
       <Header />
@@ -13,9 +14,32 @@ export const Starred = () => {
             <li>
               <h3>{subject}</h3>
               <p>{content}</p>
-
-              <button>delete mail</button>
-              <button>mark as read</button>
+              <NavLink to={`/${mId}`}>View Details</NavLink>
+              <button
+                onClick={() => dispatch({ type: "deleteMail", payload: mId })}
+              >
+                delete
+              </button>
+              <button
+                onClick={() => dispatch({ type: "reportSpam", payload: mId })}
+              >
+                report spam
+              </button>
+              <button
+                onClick={() => dispatch({ type: "marksAsRead", payload: mId })}
+              >
+                {unread ? "mark as read" : "mark as unread"}
+              </button>
+              <button
+                onClick={() => dispatch({ type: "starMail", payload: mId })}
+              >
+                {isStarred ? "remove star" : "star"}
+              </button>
+              <button
+                onClick={() => dispatch({ type: "marksAsRead", payload: mId })}
+              >
+                {unread ? "mark as read" : "mark as unread"}
+              </button>
             </li>
           ))}
       </ul>
