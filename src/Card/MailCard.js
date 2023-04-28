@@ -9,8 +9,12 @@ export const MailCard = ({ mId, unread, isStarred, subject, content }) => {
       <button onClick={() => dispatch({ type: "deleteMail", payload: mId })}>
         delete
       </button>
-      <button>report spam</button>
-      <button>mark as read</button>
+      <button onClick={() => dispatch({ type: "reportSpam", payload: mId })}>
+        report spam
+      </button>
+      <button onClick={() => dispatch({ type: "starMail", payload: mId })}>
+        {isStarred ? "remove star" : "star"}
+      </button>
     </div>
   );
 };

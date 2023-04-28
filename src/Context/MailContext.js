@@ -10,7 +10,6 @@ export const MailContextProvider = ({ children }) => {
     inbox: mails,
     spam: [],
     trash: [],
-    starred: [],
   });
   console.log(state);
   return (
