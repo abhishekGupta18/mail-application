@@ -8,6 +8,7 @@ export const Trash = () => {
   return (
     <>
       <Header />
+      <h1>Deleted Mails</h1>
       <ul>
         {state?.trash.map(({ mId, unread, isStarred, subject, content }) => (
           <div>

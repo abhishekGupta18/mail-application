@@ -63,6 +63,16 @@ export const reducerFunction = (state, action) => {
           state?.spam?.find((item) => item?.mId === action.payload),
         ],
       };
+    case "showUnread":
+      return {
+        ...state,
+        unredMail: !state?.unredMail,
+      };
+    case "showStarred":
+      return {
+        ...state,
+        starredMail: !state?.starredMail,
+      };
     default:
       return state;
   }

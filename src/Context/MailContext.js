@@ -10,10 +10,19 @@ export const MailContextProvider = ({ children }) => {
     inbox: mails,
     spam: [],
     trash: [],
+    starredMail: false,
+    unredMail: false,
   });
-  console.log(state);
+
+  const filteredMails = state?.inbox?.filter(
+    (mail) =>
+      (state.starredMail && mail.isStarred) ||
+      (state.unredMail && !mail.unread) ||
+      (!state.starredMail && !state.unredMail)
+  );
+
   return (
-    <MailContext.Provider value={{ state, dispatch, mails }}>
+    <MailContext.Provider value={{ state, dispatch, mails, filteredMails }}>
       {children}
     </MailContext.Provider>
   );

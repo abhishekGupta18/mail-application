@@ -4,22 +4,32 @@ import { Header } from "../../Component/Header";
 import { MailCard } from "../../Card/MailCard";
 // import { mails } from "../../Data/Data";
 export const Inbox = () => {
-  const { state } = useMailContext();
+  const { filteredMails, dispatch } = useMailContext();
 
   return (
     <>
       <Header />
       <div>
-        <input type="checkbox" />
-        <label htmlFor="">show unread mails</label>
+        <label>
+          show unread mails{" "}
+          <input
+            type="checkbox"
+            onClick={() => dispatch({ type: "showUnread" })}
+          />
+        </label>
 
-        <input type="checkbox" />
-        <label htmlFor="">show starred mails</label>
+        <label>
+          show starred mails{" "}
+          <input
+            type="checkbox"
+            onClick={() => dispatch({ type: "showStarred" })}
+          />
+        </label>
       </div>
 
       <h1>This is Inbox</h1>
       <ul>
-        {state?.inbox?.map((mail) => (
+        {filteredMails?.map((mail) => (
           <li>
             <MailCard {...mail} />
           </li>
