@@ -4,3 +4,33 @@
 .spam-mails {
   flex: 1;
 }
+
+.spam-mails h1 {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  color: #111827;
+  margin: 40px 0;
+}
+
+.spam-mails p {
+  margin: 10px 0;
+}
+
+.spam-function {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.spam-button {
+  display: flex;
+  gap: 20px;
+  margin-right: 25px;
+}
+.not-spam {
+  border: none;
+  background: none;
+  color: #ef4444;
+  font-weight: 700;
+  font-size: 15px;
+}

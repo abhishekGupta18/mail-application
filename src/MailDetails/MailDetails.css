@@ -1,0 +1,14 @@
+.detail-page {
+  display: flex;
+}
+.detail-content {
+  flex: 1;
+  margin: 0 30px;
+}
+.detail-content h1 {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  color: #111827;
+  margin: 40px 0;
+}

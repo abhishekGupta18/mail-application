@@ -4,3 +4,41 @@
 .starred-mails {
   flex: 1;
 }
+.starred-mails h1 {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  color: #111827;
+  margin: 40px 0;
+}
+
+.subject-star {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subject-star button {
+  margin-right: 15px;
+  border: none;
+  background: none;
+}
+.subject-star button svg {
+  font-size: 30px;
+}
+
+.starred-mails p {
+  margin: 10px 0;
+}
+
+.star-function {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.star-buttons {
+  display: flex;
+  gap: 20px;
+  margin-right: 25px;
+}

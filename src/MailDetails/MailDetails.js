@@ -1,3 +1,4 @@
+import "./MailDetails.css";
 import { useParams } from "react-router-dom";
 import { useMailContext } from "../Context/MailContext";
 
@@ -9,12 +10,14 @@ export const MailDetails = () => {
   const showMail = mails?.find((item) => item?.mId === mailId);
   const { subject, content } = showMail;
   return (
-    <>
+    <div className="detail-page">
       <Header />
-      <div>
+      <div className="detail-content">
+        <h1> Mail Details</h1>
         <h3>{subject}</h3>
-        <p>{content}</p>
+        <p style={{ margin: " 20px 0" }}>{content}</p>
+        <hr />
       </div>
-    </>
+    </div>
   );
 };

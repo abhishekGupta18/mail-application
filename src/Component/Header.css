@@ -6,7 +6,8 @@
   align-items: center;
   gap: 30px;
   padding-top: 7%;
-  background: #e2e8f0;
+  background: #e7e5e4;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .navbar a {
