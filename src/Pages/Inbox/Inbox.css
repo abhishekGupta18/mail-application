@@ -1,0 +1,45 @@
+.Inbox-page {
+  display: flex;
+}
+.inbox-mails {
+  flex: 1;
+  margin-top: 40px;
+}
+
+.inbox-mails h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  color: #111827;
+}
+.inbox-mails svg {
+  font-size: 35px;
+}
+
+.inbox-filters {
+  display: flex;
+  gap: 100px;
+  margin: 40px 30px 20px 30px;
+  padding: 20px 0 25px 40px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.inbox-filters legend {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.inbox-filters label {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  font-weight: 500;
+}
+
+.inbox-mails h3 {
+  margin: 0 0 20px 40px;
+}

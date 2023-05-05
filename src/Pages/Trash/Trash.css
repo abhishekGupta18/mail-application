@@ -1,0 +1,6 @@
+.trash-page {
+  display: flex;
+}
+.trash-mails {
+  flex: 1;
+}

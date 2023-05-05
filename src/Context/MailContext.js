@@ -17,12 +17,15 @@ export const MailContextProvider = ({ children }) => {
   const filteredMails = state?.inbox?.filter(
     (mail) =>
       (state.starredMail && mail.isStarred) ||
-      (state.unredMail && !mail.unread) ||
+      (state.unredMail && mail.unread) ||
       (!state.starredMail && !state.unredMail)
   );
 
+  const unReadMails = filteredMails?.filter(({ unread }) => unread).length;
   return (
-    <MailContext.Provider value={{ state, dispatch, mails, filteredMails }}>
+    <MailContext.Provider
+      value={{ state, dispatch, mails, filteredMails, unReadMails }}
+    >
       {children}
     </MailContext.Provider>
   );

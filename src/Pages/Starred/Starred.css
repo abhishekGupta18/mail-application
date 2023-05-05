@@ -1,0 +1,6 @@
+.starred-page {
+  display: flex;
+}
+.starred-mails {
+  flex: 1;
+}

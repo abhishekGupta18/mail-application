@@ -1,0 +1,63 @@
+.sub-star {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sub-star button {
+  margin-right: 15px;
+  border: none;
+  background: none;
+}
+.sub-star button svg {
+  font-size: 30px;
+}
+
+.mail-content p {
+  margin: 10px 0;
+}
+
+.mail-functions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-mail {
+  text-decoration: none;
+  color: #3730a3;
+  font-size: 15px;
+  font-weight: 700;
+}
+.detail-mail:hover {
+  transform: scale(1.08);
+}
+
+.mail-buttons {
+  display: flex;
+  gap: 20px;
+  margin-right: 25px;
+}
+
+.delete-button {
+  border: none;
+  background: none;
+  color: #ef4444;
+}
+.delete-button svg {
+  font-size: 20px;
+}
+
+.report-button {
+  border: none;
+  background: none;
+  font-size: 15px;
+  color: #0369a1;
+  font-weight: 700;
+}
+.read-button {
+  border: none;
+  background: none;
+  font-size: 15px;
+  color: #65a30d;
+  font-weight: 700;
+}

@@ -1,0 +1,6 @@
+.spam-page {
+  display: flex;
+}
+.spam-mails {
+  flex: 1;
+}

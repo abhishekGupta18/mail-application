@@ -1,11 +1,31 @@
+import "./Header.css";
 import { NavLink } from "react-router-dom";
+
+import InboxIcon from "@mui/icons-material/Inbox";
+import StarIcon from "@mui/icons-material/Star";
+import DeleteIcon from "@mui/icons-material/Delete";
+import ReportGmailerrorredIcon from "@mui/icons-material/ReportGmailerrorred";
+
 export const Header = () => {
   return (
-    <>
-      <NavLink to="/">Inbox</NavLink> ||
-      <NavLink to="/starred">Starred</NavLink> ||
-      <NavLink to="/trash">Trash</NavLink> ||
-      <NavLink to="/spam">Spam</NavLink>
-    </>
+    <nav className="navbar">
+      <NavLink to="/">
+        <InboxIcon /> Inbox
+      </NavLink>
+      <NavLink to="/starred">
+        {" "}
+        <StarIcon />
+        Starred
+      </NavLink>
+      <NavLink to="/trash">
+        <DeleteIcon />
+        Trash
+      </NavLink>
+      <NavLink to="/spam">
+        {" "}
+        <ReportGmailerrorredIcon />
+        Spam
+      </NavLink>
+    </nav>
   );
 };
